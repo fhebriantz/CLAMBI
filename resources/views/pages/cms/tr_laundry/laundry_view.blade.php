@@ -13,11 +13,10 @@
   display: table-cell;
   vertical-align: middle;
 }
-
+/**/
 .inner {
   margin-right: auto;
   width: 400px;
-  /*whatever width you want*/
 }
 .price-detail{
     font-size: 60px;
