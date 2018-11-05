@@ -94,15 +94,15 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <label for="">Nama Customer</label>
-                                            <p>@if($laundry->cust_fullname == "" || $laundry->cust_fullname == null)-@else{{$laundry->cust_fullname}}@endif</p>
+                                            <p>{{$laundry->cust_fullname}}</p>
 
 
                                             <label for="">Jenis Kelamin</label>
-                                            <p>@if($laundry->cust_gender == "" || $laundry->cust_gender == null)-@else{{$laundry->cust_gender}}@endif</p>
+                                            <p>{{$laundry->cust_gender}}</p>
 
 
                                             <label for="">Nomor Telepon</label>
-                                            <p>@if($laundry->cust_handphone == "" || $laundry->cust_handphone == null)-@else{{$laundry->cust_handphone}}@endif</p>
+                                            <p>{{$laundry->cust_handphone}}</p>
                                             
                                             <label for="">Alamat Customer</label>
                                             <p>{{$laundry->cust_address}}, {{$laundry->cust_kelurahan}} <br>{{$laundry->cust_kecamatan}}, {{$laundry->cust_kabkota}}, {{$laundry->cust_provinsi}}, {{$laundry->cust_kodepos}}</p>
@@ -162,7 +162,6 @@
 
 
                                                 <tbody>    
-                                                @if($item->count() > 0) 
                                                     @foreach($item as $barang)         
                                                     <tr>
                                                         <td>{{$barang->item}}</td>
@@ -171,11 +170,6 @@
                                                         <td class="autonumber" data-a-sign="Rp ">{{$barang->price_dryclean}}</td>
                                                     </tr>
                                                     @endforeach
-                                                @else
-                                                    <tr>
-                                                        <td colspan="4">Tidak ada baju</td>
-                                                    </tr>
-                                                @endif
                                                 </tbody>
                                             </table>
                                         </div>
@@ -260,7 +254,6 @@
 
 
                                         <tbody>     
-                                        @if($payment->count() > 0)
                                             @foreach($payment as $bayar)        
                                             <tr>
                                                 <td>{{$bayar->type}}</td>
@@ -270,11 +263,6 @@
                                                 <td>{{ \Carbon\Carbon::parse($bayar->payment_date)->format('d F Y H:i:s')}}</td>
                                             </tr>
                                             @endforeach
-                                        @else
-                                            <tr>
-                                                <td colspan="5">Belum ada pembayaran</td>
-                                            </tr>
-                                        @endif
                                         </tbody>
                                     </table>
                                 </div>
@@ -290,19 +278,13 @@
                                         </thead>
 
 
-                                        <tbody> 
-                                        @if($task->count() > 0)    
+                                        <tbody>     
                                             @foreach($task as $status)     
                                             <tr>
                                                 <td>{{$status->status}}</td>
                                                 <td>{{$status->outlet_user}}</td>
                                             </tr>
                                             @endforeach
-                                        @else
-                                            <tr>
-                                                <td colspan="2">Belum ada pengerjaan</td>
-                                            </tr>
-                                        @endif
                                         </tbody>
                                     </table>
                                 </div>

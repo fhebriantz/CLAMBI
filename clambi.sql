@@ -67,7 +67,7 @@ CREATE TABLE `dt_item_laundry` (
 
 LOCK TABLES `dt_item_laundry` WRITE;
 /*!40000 ALTER TABLE `dt_item_laundry` DISABLE KEYS */;
-INSERT INTO `dt_item_laundry` VALUES (1,1,'BAJU','1',2500,2000,1,1),(2,1,'CELANA','1',3000,6000,1,1),(3,2,'BAJU','1',3000,6000,4,1),(4,2,'Jaket','1',3000,6000,1,1),(5,3,'Jaket','1',5000,7000,1,1),(6,3,'Jaket','1',5000,7000,1,1);
+INSERT INTO `dt_item_laundry` VALUES (1,1,'BAJU','satuan',2500,2000,1,1),(2,1,'CELANA','satuan',3000,6000,1,1),(3,2,'BAJU','satuan',3000,6000,4,1),(4,2,'Jaket','satuan',3000,6000,1,1),(5,3,'Jaket','satuan',5000,7000,1,1),(6,3,'Jaket','satuan',5000,7000,1,1);
 /*!40000 ALTER TABLE `dt_item_laundry` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,6 +166,34 @@ LOCK TABLES `dt_payment_laundry_history` WRITE;
 /*!40000 ALTER TABLE `dt_payment_laundry_history` DISABLE KEYS */;
 INSERT INTO `dt_payment_laundry_history` VALUES (1,1,'down_payment','debit',50000,'tina','2018-10-21 10:00:00',1,'1','2018-10-21 10:00:00',NULL,NULL),(2,1,'lunas','debit',70000,'tina','2018-10-22 10:00:00',1,'1','2018-10-22 10:00:00',NULL,NULL);
 /*!40000 ALTER TABLE `dt_payment_laundry_history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dt_promo_laundry`
+--
+
+DROP TABLE IF EXISTS `dt_promo_laundry`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dt_promo_laundry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_laundry` varchar(45) NOT NULL,
+  `promo_code` varchar(50) DEFAULT NULL,
+  `promo_name` varchar(256) DEFAULT NULL,
+  `promo_nominal` bigint(20) DEFAULT NULL,
+  `promo_type` varchar(50) DEFAULT NULL,
+  `is_active` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dt_promo_laundry`
+--
+
+LOCK TABLES `dt_promo_laundry` WRITE;
+/*!40000 ALTER TABLE `dt_promo_laundry` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dt_promo_laundry` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -411,7 +439,7 @@ CREATE TABLE `ms_laundry_service` (
 
 LOCK TABLES `ms_laundry_service` WRITE;
 /*!40000 ALTER TABLE `ms_laundry_service` DISABLE KEYS */;
-INSERT INTO `ms_laundry_service` VALUES (1,1,'CUCI KILOAN','perbulan','dengan pewangi',5000,91000,1,'SYSTEM','2018-10-10 00:00:00','2','2018-10-25 03:55:29'),(2,1,'SETRIKA','','ok',7000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(3,1,'CUCI','','ok',5000,0,0,'SYSTEM','2018-10-10 00:00:00',NULL,'2018-10-25 04:02:33'),(4,1,'SETRIKA DAN CUCI','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(5,1,'JAKET','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(6,1,'KAOS','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(7,1,'CELANA JEANS','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(8,1,'CELANA BAHAN','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(9,1,'KEMEJA','','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(10,1,'JAS','','ok',10000,20000,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(11,1,'Kilat Karpet','perbulan','<p>ok</p>',10000,20000,1,'2','2018-10-25 04:02:02',NULL,'2018-10-25 04:02:02'),(12,1,'Cuci','perbulan','<p>ok</p>',5000,0,1,'2','2018-10-25 04:03:32',NULL,'2018-10-25 04:03:32'),(13,1,'test12','perbulan2','test description2',1231232,4564562,2,'1','2018-10-29 07:08:31','1','2018-10-29 08:48:21');
+INSERT INTO `ms_laundry_service` VALUES (1,1,'CUCI KILOAN','kiloan','dengan pewangi',5000,91000,1,'SYSTEM','2018-10-10 00:00:00','2','2018-10-25 03:55:29'),(2,1,'SETRIKA','all','ok',7000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(3,1,'CUCI','all','ok',5000,0,0,'SYSTEM','2018-10-10 00:00:00',NULL,'2018-10-25 04:02:33'),(4,1,'SETRIKA DAN CUCI','all','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(5,1,'JAKET','satuan','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(6,1,'KAOS','satuan','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(7,1,'CELANA JEANS','satuan','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(8,1,'CELANA BAHAN','satuan','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(9,1,'KEMEJA','satuan','ok',10000,0,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(10,1,'JAS','satuan','ok',10000,20000,1,'SYSTEM','2018-10-10 00:00:00',NULL,NULL),(11,1,'Kilat Karpet','satuan','<p>ok</p>',10000,20000,1,'2','2018-10-25 04:02:02',NULL,'2018-10-25 04:02:02'),(12,1,'Cuci','satuan','<p>ok</p>',5000,0,1,'2','2018-10-25 04:03:32',NULL,'2018-10-25 04:03:32'),(13,1,'test12','satuan','test description2',1231232,4564562,2,'1','2018-10-29 07:08:31','1','2018-10-29 08:48:21');
 /*!40000 ALTER TABLE `ms_laundry_service` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -677,7 +705,6 @@ CREATE TABLE `tr_laundry` (
   `date_end` datetime DEFAULT NULL COMMENT 'laundry process is finished',
   `date_end_estimated` datetime DEFAULT NULL COMMENT 'Estimated date while transaction',
   `date_out` datetime NOT NULL COMMENT 'laundry out',
-  `id_promo` int(11) DEFAULT NULL,
   `total_payment` bigint(20) NOT NULL,
   `qty_satuan` int(11) DEFAULT NULL,
   `qty_kiloan` int(11) DEFAULT NULL,
@@ -700,7 +727,7 @@ CREATE TABLE `tr_laundry` (
 
 LOCK TABLES `tr_laundry` WRITE;
 /*!40000 ALTER TABLE `tr_laundry` DISABLE KEYS */;
-INSERT INTO `tr_laundry` VALUES (1,'TR0000001',1,'Staff Outlet A1','Udin','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132','Parfum',2500,'2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-16 00:00:00',2,50000,2,5,'belum_diambil',1,1,1,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(2,'TR0000002',1,'Staff Outlet A2','Sanusi','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132','-',0,'2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-16 00:00:00',1,20000,0,4,'belum_diambil',0,0,0,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(3,'TR0000003',1,'Staff Outlet A2','Logam','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132',NULL,0,'2018-10-09 00:00:00','2018-09-09 00:00:00','2018-10-01 00:00:00','2018-10-20 00:00:00','2018-10-16 00:00:00',0,7000,0,3,'belum_diambil',0,1,0,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(4,'TR0000004',1,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-10-09 00:00:00',NULL,NULL,NULL,'2018-10-16 00:00:00',0,0,0,NULL,'belum_diambil',0,0,1,1,'','2018-09-18 00:00:00',NULL,NULL);
+INSERT INTO `tr_laundry` VALUES (1,'TR0000001',1,'Staff Outlet A1','Udin','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132','Parfum',2500,'2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-16 00:00:00',50000,2,5,'belum_diambil',1,1,1,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(2,'TR0000002',1,'Staff Outlet A2','Sanusi','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132','-',0,'2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-09 00:00:00','2018-10-16 00:00:00',20000,0,4,'belum_diambil',0,0,0,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(3,'TR0000003',1,'Staff Outlet A2','Logam','Pria','085718841359','Samping Indomaret','Jawa Barat','Bogor Selatan','Ranggamekar','Bogor','16132',NULL,0,'2018-10-09 00:00:00','2018-09-09 00:00:00','2018-10-01 00:00:00','2018-10-20 00:00:00','2018-10-16 00:00:00',7000,0,3,'belum_diambil',0,1,0,1,'Lutfi','2018-09-18 00:00:00',NULL,NULL),(4,'TR0000004',1,'',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-10-09 00:00:00',NULL,NULL,NULL,'2018-10-16 00:00:00',0,0,NULL,'belum_diambil',0,0,1,1,'','2018-09-18 00:00:00',NULL,NULL);
 /*!40000 ALTER TABLE `tr_laundry` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -813,7 +840,7 @@ CREATE TABLE `user_log` (
   `created_by` varchar(256) NOT NULL,
   `created_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -822,7 +849,7 @@ CREATE TABLE `user_log` (
 
 LOCK TABLES `user_log` WRITE;
 /*!40000 ALTER TABLE `user_log` DISABLE KEYS */;
-INSERT INTO `user_log` VALUES (1,'User Login','','172.31.25.148','1','2018-10-16 08:15:08'),(2,'Create New Account','','172.31.25.148','6','2018-10-16 08:15:17'),(3,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','6','2018-10-16 08:15:19'),(4,'Create New Account','','172.31.25.148','7','2018-10-16 10:10:44'),(5,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','7','2018-10-16 10:10:47'),(8,'Verification by email','','172.31.25.148','7','2018-10-17 07:56:07'),(9,'Create New Account','','172.31.25.148','8','2018-10-18 03:16:00'),(10,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','8','2018-10-18 03:16:02'),(11,'Verification by email','','172.31.25.148','8','2018-10-18 03:16:33'),(12,'Create New Account','','172.31.25.148','9','2018-10-18 04:16:13'),(13,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','9','2018-10-18 04:16:16'),(14,'User Login','','172.31.25.148','1','2018-10-18 06:41:09'),(15,'Create New Customer Data','10','172.31.25.148','1','2018-10-26 02:44:35'),(16,'Create New Customer Data','11','172.31.25.148','1','2018-10-26 02:46:17'),(17,'Create New Customer Data','id_customer: 13','172.31.25.148','1','2018-10-26 07:03:37'),(18,'Create New Customer Data','id_customer: 14','172.31.25.148','1','2018-10-26 07:09:23'),(19,'Create New Customer Data','id_customer: 15','172.31.25.148','1','2018-10-26 07:09:51'),(20,'Create New Customer Data','id_customer: 16','172.31.25.148','1','2018-10-26 07:13:38'),(21,'Create New Customer Data','ID Customer: 17','172.31.25.148','1','2018-10-26 07:27:42'),(22,'Create New Customer Data','ID Customer: 18','172.31.25.148','1','2018-10-26 07:28:00'),(23,'Update Customer Data','ID Customer: 0','172.31.25.148','2','2018-10-26 07:52:30'),(24,'Update Customer Data','ID Customer: 0','172.31.25.148','2','2018-10-26 07:53:08'),(25,'Create New Item Service Laundry','ID Item Service: 13','172.31.25.148','1','2018-10-29 07:08:31'),(26,'Update Item Service Laundry Data','ID Customer: 13','172.31.25.148','1','2018-10-29 07:23:17'),(27,'Update Item Service Laundry Data','ID Customer: 13','172.31.25.148','1','2018-10-29 07:23:29'),(28,'Create New Additional Service Laundry','ID Additional Service: 3','172.31.25.148','1','2018-10-29 07:43:38'),(29,'Update Additional Service Laundry Data','ID Additional Service: 3','172.31.25.148','12','2018-10-29 07:56:23'),(30,'Delete Item Service Laundry','ID Item Service: 13','172.31.25.148','1','2018-10-29 08:48:21'),(31,'Delete Additional Service Laundry','ID Additional Service: 3','172.31.25.148','12','2018-10-29 08:51:16'),(32,'Create New Promo','ID Promo: 5','172.31.25.148','1','2018-10-30 06:17:31'),(33,'Create New Promo','ID Promo: 6','172.31.25.148','1','2018-10-30 06:18:30'),(34,'Update Promo Data','ID Promo: 5','172.31.25.148','1','2018-10-30 06:21:38'),(35,'Delete Promo','ID Promo: 6','172.31.25.148','1','2018-10-30 06:37:29'),(36,'Delete Customer','ID Customer: 18','172.31.25.148','1','2018-10-30 07:19:36');
+INSERT INTO `user_log` VALUES (1,'User Login','','172.31.25.148','1','2018-10-16 08:15:08'),(2,'Create New Account','','172.31.25.148','6','2018-10-16 08:15:17'),(3,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','6','2018-10-16 08:15:19'),(4,'Create New Account','','172.31.25.148','7','2018-10-16 10:10:44'),(5,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','7','2018-10-16 10:10:47'),(8,'Verification by email','','172.31.25.148','7','2018-10-17 07:56:07'),(9,'Create New Account','','172.31.25.148','8','2018-10-18 03:16:00'),(10,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','8','2018-10-18 03:16:02'),(11,'Verification by email','','172.31.25.148','8','2018-10-18 03:16:33'),(12,'Create New Account','','172.31.25.148','9','2018-10-18 04:16:13'),(13,'Email verification has been sent','email address: deby.natazha@gmail.com','172.31.25.148','9','2018-10-18 04:16:16'),(14,'User Login','','172.31.25.148','1','2018-10-18 06:41:09'),(15,'Create New Customer Data','10','172.31.25.148','1','2018-10-26 02:44:35'),(16,'Create New Customer Data','11','172.31.25.148','1','2018-10-26 02:46:17'),(17,'Create New Customer Data','id_customer: 13','172.31.25.148','1','2018-10-26 07:03:37'),(18,'Create New Customer Data','id_customer: 14','172.31.25.148','1','2018-10-26 07:09:23'),(19,'Create New Customer Data','id_customer: 15','172.31.25.148','1','2018-10-26 07:09:51'),(20,'Create New Customer Data','id_customer: 16','172.31.25.148','1','2018-10-26 07:13:38'),(21,'Create New Customer Data','ID Customer: 17','172.31.25.148','1','2018-10-26 07:27:42'),(22,'Create New Customer Data','ID Customer: 18','172.31.25.148','1','2018-10-26 07:28:00'),(23,'Update Customer Data','ID Customer: 0','172.31.25.148','2','2018-10-26 07:52:30'),(24,'Update Customer Data','ID Customer: 0','172.31.25.148','2','2018-10-26 07:53:08'),(25,'Create New Item Service Laundry','ID Item Service: 13','172.31.25.148','1','2018-10-29 07:08:31'),(26,'Update Item Service Laundry Data','ID Customer: 13','172.31.25.148','1','2018-10-29 07:23:17'),(27,'Update Item Service Laundry Data','ID Customer: 13','172.31.25.148','1','2018-10-29 07:23:29'),(28,'Create New Additional Service Laundry','ID Additional Service: 3','172.31.25.148','1','2018-10-29 07:43:38'),(29,'Update Additional Service Laundry Data','ID Additional Service: 3','172.31.25.148','12','2018-10-29 07:56:23'),(30,'Delete Item Service Laundry','ID Item Service: 13','172.31.25.148','1','2018-10-29 08:48:21'),(31,'Delete Additional Service Laundry','ID Additional Service: 3','172.31.25.148','12','2018-10-29 08:51:16'),(32,'Create New Promo','ID Promo: 5','172.31.25.148','1','2018-10-30 06:17:31'),(33,'Create New Promo','ID Promo: 6','172.31.25.148','1','2018-10-30 06:18:30'),(34,'Update Promo Data','ID Promo: 5','172.31.25.148','1','2018-10-30 06:21:38'),(35,'Delete Promo','ID Promo: 6','172.31.25.148','1','2018-10-30 06:37:29'),(36,'Delete Customer','ID Customer: 18','172.31.25.148','1','2018-10-30 07:19:36'),(37,'User Login','','172.31.25.148','2','2018-11-02 06:57:56');
 /*!40000 ALTER TABLE `user_log` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -835,4 +862,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-31 17:04:48
+-- Dump completed on 2018-11-05 14:33:57

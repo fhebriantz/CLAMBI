@@ -7,10 +7,10 @@
         <meta name="author" content="Coderthemes">
 
         <!-- App Favicon -->
-        <link rel="shortcut icon" href="{{ asset('images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset('/images/logo/logo.png')}}">
 
         <!-- App title -->
-        <title>Uplon - Responsive Admin Dashboard Template</title>
+        <title>Clambi - Login</title>
 
         <!-- App CSS -->
         <link href="{{ asset('css/style.css')}}" rel="stylesheet" type="text/css" />
