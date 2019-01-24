@@ -29,6 +29,27 @@ Route::post('/signup', 'Login\Cms_LoginController@signup');
 Route::get('/logout', 'Login\Cms_LoginController@logout');
 
 
+// sponsor
+Route::get('/sponsor', 'Master\Mast_SponsorController@show');
+Route::get('/sponsor/{id}/edit', 'Master\Mast_SponsorController@edit');
+Route::get('/sponsor/input', 'Master\Mast_SponsorController@input');
+// crud sponsor
+Route::post('/sponsor/input','Master\Mast_SponsorController@insert'); 
+Route::put('/sponsor/{id}/edit','Master\Mast_SponsorController@update'); 
+Route::delete('/sponsor/{id}/delete','Master\Mast_SponsorController@delete');
+
+// ---------------------------------------------------------------------------
+
+// additional
+Route::get('/additional', 'Master\Ms_AdditionalController@show');
+Route::get('/additional/{id}/edit', 'Master\Ms_AdditionalController@edit');
+Route::get('/additional/input', 'Master\Ms_AdditionalController@input');
+// crud additional
+Route::post('/additional/input','Master\Ms_AdditionalController@insert'); 
+Route::put('/additional/{id}/edit','Master\Ms_AdditionalController@update'); 
+Route::delete('/additional/{id}/delete','Master\Ms_AdditionalController@delete');
+
+
 // ------Transaction--------
 // laundry
 Route::get('/laundry', 'Transaction\Tr_LaundryController@show');
@@ -66,14 +87,7 @@ Route::put('/outlet/{id}/edit','Master\Ms_OutletController@update');
 Route::delete('/outlet/{id}/delete','Master\Ms_OutletController@delete');
 
 
-// additional
-Route::get('/additional', 'Master\Ms_AdditionalController@show');
-Route::get('/additional/{id}/edit', 'Master\Ms_AdditionalController@edit');
-Route::get('/additional/input', 'Master\Ms_AdditionalController@input');
-// crud additional
-Route::post('/additional/input','Master\Ms_AdditionalController@insert'); 
-Route::put('/additional/{id}/edit','Master\Ms_AdditionalController@update'); 
-Route::delete('/additional/{id}/delete','Master\Ms_AdditionalController@delete');
+
 
 // laundryservice
 Route::get('/laundryservice', 'Master\Ms_LaundryserviceController@show');
