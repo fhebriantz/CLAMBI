@@ -109,7 +109,7 @@
                                         <a href="{{ url('/laundry')}}" class="waves-effect"><span>Transaksi Laundry</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/user_package')}}" class="waves-effect"><span>Transaksi Paket</span></a>
+                                        <a href="{{ url('/order')}}" class="waves-effect"><span>Transaksi Order</span></a>
                                     </li>
                                 </ul>
                             </li>

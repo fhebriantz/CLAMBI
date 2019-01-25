@@ -28,6 +28,21 @@ Route::post('/login', 'Login\Cms_LoginController@login');
 Route::post('/signup', 'Login\Cms_LoginController@signup');
 Route::get('/logout', 'Login\Cms_LoginController@logout');
 
+// order
+Route::get('/order', 'Transaction\Trans_OrderController@show');
+Route::get('/order/{id}/view', 'Transaction\Trans_OrderController@view');
+Route::get('/detail/{id}/edit', 'Transaction\Trans_OrderController@detailedit');
+Route::get('/detail/{id}/input', 'Transaction\Trans_OrderController@detailinput');
+Route::get('/order/input', 'Transaction\Trans_OrderController@input');
+// crud order
+Route::post('/detail/{id}/input','Transaction\Trans_OrderController@detailinsert');
+Route::post('/detail/{id}/active','Transaction\Trans_OrderController@active');
+Route::delete('/detail/{id}/delete','Transaction\Trans_OrderController@detaildelete'); 
+Route::post('/order/input','Transaction\Trans_OrderController@insert'); 
+Route::put('/order/{id}/edit','Transaction\Trans_OrderController@update'); 
+Route::put('/detail/{id}/edit','Transaction\Trans_OrderController@detailupdate'); 
+Route::delete('/order/{id}/delete','Transaction\Trans_OrderController@delete');
+
 
 // sponsor
 Route::get('/sponsor', 'Master\Mast_SponsorController@show');
@@ -82,6 +97,7 @@ Route::get('/medrep/input', 'Master\Mast_MedrepController@input');
 Route::post('/medrep/input','Master\Mast_MedrepController@insert'); 
 Route::put('/medrep/{id}/edit','Master\Mast_MedrepController@update'); 
 Route::delete('/medrep/{id}/delete','Master\Mast_MedrepController@delete');
+
 
 // ---------------------------------------------------------------------------
 

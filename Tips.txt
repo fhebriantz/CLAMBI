@@ -1,0 +1,5 @@
+bikin order 
+lanjut = masuk (is active 0)
+tambah barang, 1, 2, 3
+cancel = is active tetep 0
+selesai = edit (is active 1)
