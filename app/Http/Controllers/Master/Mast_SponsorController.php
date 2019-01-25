@@ -25,8 +25,7 @@ class Mast_SponsorController extends Controller
 
      public function input()
     {
-        $sponsor = Mast_Sponsor::all();
-        return  view('pages/cms/mast_sponsor/sponsor_input', compact('sponsor'));
+        return  view('pages/cms/mast_sponsor/sponsor_input');
     }
 
     public function edit($id)
@@ -40,20 +39,20 @@ class Mast_SponsorController extends Controller
 
         $validatedData = $request->validate([
 
-                'id_outlet' => 'required',
-                'item' => 'required',
-                'price' => 'required',
-                'description' => 'required',
+                'tgl_pengajuan' => 'required',
+                'nama_dokter' => 'required',
+                'periode_pengajuan' => 'required',
+                'pengajuan_omset' => 'required'
             ]);
 
         $sponsor = new Mast_Sponsor;
 
-            $sponsor->id_outlet = $request->id_outlet; 
-            $sponsor->item = $request->item; 
-            $sponsor->price = $request->price; 
-            $sponsor->description = $request->description; 
-            $sponsor->is_active = 1;  
-            $sponsor->created_by = session()->get('session_id');
+            $sponsor->tgl_pengajuan = $request->tgl_pengajuan; 
+            $sponsor->nama_dokter = $request->nama_dokter; 
+            $sponsor->periode_pengajuan = $request->periode_pengajuan; 
+            $sponsor->pengajuan_omset = $request->pengajuan_omset; 
+            $sponsor->diskon = $request->diskon; 
+            $sponsor->created_by = session()->get('session_id');  
 
         $sponsor->save();
 
@@ -64,19 +63,20 @@ class Mast_SponsorController extends Controller
     {
         $validatedData = $request->validate([
 
-                'id_outlet' => 'required',
-                'item' => 'required',
-                'price' => 'required',
-                'description' => 'required',
+                'tgl_pengajuan' => 'required',
+                'nama_dokter' => 'required',
+                'periode_pengajuan' => 'required',
+                'pengajuan_omset' => 'required'
 
             ]);
 
         $sponsor = Mast_Sponsor::where('id','=',$id)->first();
 
-            $sponsor->id_outlet = $request->id_outlet; 
-            $sponsor->item = $request->item; 
-            $sponsor->price = $request->price; 
-            $sponsor->description = $request->description; 
+            $sponsor->tgl_pengajuan = $request->tgl_pengajuan; 
+            $sponsor->nama_dokter = $request->nama_dokter; 
+            $sponsor->periode_pengajuan = $request->periode_pengajuan; 
+            $sponsor->pengajuan_omset = $request->pengajuan_omset; 
+            $sponsor->diskon = $request->diskon; 
             $sponsor->modified_by = session()->get('session_id');  
 
         $sponsor->save();
@@ -86,8 +86,7 @@ class Mast_SponsorController extends Controller
 
     public function delete($id){
         $sponsor = Mast_Sponsor::where('id','=',$id)->first();
-        $sponsor->is_active = 0;
-        $sponsor->save();
+        $sponsor->delete();
 
         return  redirect('/sponsor');
     } 

@@ -18,13 +18,13 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Master Sponsor</h4>
+                                    <h4 class="page-title">Master Brosur</h4>
                                     <ol class="breadcrumb p-0">
                                         <li>
                                             <a href="#">Slau</a>
                                         </li>
                                         <li>
-                                            <a href="#">Sponsor</a>
+                                            <a href="#">Brosur</a>
                                         </li>
                                         <li class="active">
                                             Input
@@ -49,7 +49,7 @@
                                                     </ul>
                                                   </div>
                                                 @endif
-                                                <form method="POST" action="{{url('/sponsor/input')}}" data-parsley-validate novalidate>
+                                                <form method="POST" action="{{url('/brosur/input')}}" data-parsley-validate novalidate>
                                                 {{ csrf_field() }}
 
                                     <div class="row">
@@ -62,31 +62,18 @@
                                                     <label>Tanggal Pengajuan</label>
                                                     <div>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" name="tgl_pengajuan" placeholder="yyyy-mm-dd" value="" autocomplete="off" id="tgl_pengajuan">
+                                                            <input type="text" autocomplete="off" class="form-control" name="tgl_brosur_upload" placeholder="yyyy-mm-dd" id="tgl_brosur_upload">
                                                             <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
                                                         </div><!-- input-group -->
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="nama_dokter">Nama Dokter<span class="text-danger">*</span></label>
-                                                    <input name="nama_dokter" autocomplete="off"  required  value=""  type="text" placeholder="Masukan Nama Dokter" name" class="form-control" id="nama_dokter">
+                                                    <label for="deskripsi">Deskripsi<span class="text-danger">*</span></label>
+                                                    <textarea name="deskripsi" class="form-control" autocomplete="off" id="" cols="30" rows="5" placeholder="Masukan Deskripsi" id="deskripsi"></textarea>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Periode Pengajuan</label>
-                                                    <div>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" autocomplete="off" name="periode_pengajuan" placeholder="yyyy-mm-dd" value="" id="periode_pengajuan">
-                                                            <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
-                                                        </div><!-- input-group -->
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Pengajuan Omset (Rp)</label>
-                                                    <input name="pengajuan_omset" autocomplete="off" type="number" value="" placeholder="Masukan Omset" data-parsley-type="number" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Diskon (%)</label>
-                                                    <input  type="number" autocomplete="off"  name="diskon" min="0" max="100" value="" placeholder="Masukan Diskon" class="form-control">
+                                                    <label for="lampiran">Lampiran<span class="text-danger">*</span></label>
+                                                    <input name="lampiran" autocomplete="off" required   type="text" placeholder="Masukan Lampiran" name" class="form-control" id="lampiran">
                                                 </div>
                                                 
                                             </div>
@@ -132,7 +119,7 @@
         <script>
             $(document).ready(function() {
           $('#summernote').summernote();
-          $('#tgl_pengajuan').datepicker({
+          $('#tgl_brosur_upload').datepicker({
                 
                     "format": "yyyy-mm-dd"
                 

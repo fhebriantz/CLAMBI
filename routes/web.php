@@ -38,6 +38,51 @@ Route::post('/sponsor/input','Master\Mast_SponsorController@insert');
 Route::put('/sponsor/{id}/edit','Master\Mast_SponsorController@update'); 
 Route::delete('/sponsor/{id}/delete','Master\Mast_SponsorController@delete');
 
+// brosur
+Route::get('/brosur', 'Master\Mast_BrosurController@show');
+Route::get('/brosur/{id}/edit', 'Master\Mast_BrosurController@edit');
+Route::get('/brosur/input', 'Master\Mast_BrosurController@input');
+// crud brosur
+Route::post('/brosur/input','Master\Mast_BrosurController@insert'); 
+Route::put('/brosur/{id}/edit','Master\Mast_BrosurController@update'); 
+Route::delete('/brosur/{id}/delete','Master\Mast_BrosurController@delete');
+
+// dokter
+Route::get('/dokter', 'Master\Mast_DokterController@show');
+Route::get('/dokter/{id}/edit', 'Master\Mast_DokterController@edit');
+Route::get('/dokter/input', 'Master\Mast_DokterController@input');
+// crud dokter
+Route::post('/dokter/input','Master\Mast_DokterController@insert'); 
+Route::put('/dokter/{id}/edit','Master\Mast_DokterController@update'); 
+Route::delete('/dokter/{id}/delete','Master\Mast_DokterController@delete');
+
+// kunjungan
+Route::get('/kunjungan', 'Master\Mast_KunjunganController@show');
+Route::get('/kunjungan/{id}/edit', 'Master\Mast_KunjunganController@edit');
+Route::get('/kunjungan/input', 'Master\Mast_KunjunganController@input');
+// crud kunjungan
+Route::post('/kunjungan/input','Master\Mast_KunjunganController@insert'); 
+Route::put('/kunjungan/{id}/edit','Master\Mast_KunjunganController@update'); 
+Route::delete('/kunjungan/{id}/delete','Master\Mast_KunjunganController@delete');
+
+// makloon
+Route::get('/makloon', 'Master\Mast_MakloonController@show');
+Route::get('/makloon/{id}/edit', 'Master\Mast_MakloonController@edit');
+Route::get('/makloon/input', 'Master\Mast_MakloonController@input');
+// crud makloon
+Route::post('/makloon/input','Master\Mast_MakloonController@insert'); 
+Route::put('/makloon/{id}/edit','Master\Mast_MakloonController@update'); 
+Route::delete('/makloon/{id}/delete','Master\Mast_MakloonController@delete');
+
+// medrep
+Route::get('/medrep', 'Master\Mast_MedrepController@show');
+Route::get('/medrep/{id}/edit', 'Master\Mast_MedrepController@edit');
+Route::get('/medrep/input', 'Master\Mast_MedrepController@input');
+// crud medrep
+Route::post('/medrep/input','Master\Mast_MedrepController@insert'); 
+Route::put('/medrep/{id}/edit','Master\Mast_MedrepController@update'); 
+Route::delete('/medrep/{id}/delete','Master\Mast_MedrepController@delete');
+
 // ---------------------------------------------------------------------------
 
 // additional

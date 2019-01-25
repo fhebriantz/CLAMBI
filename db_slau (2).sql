@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2019 at 11:24 AM
+-- Generation Time: Jan 25, 2019 at 10:43 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -357,12 +357,12 @@ CREATE TABLE `dt_task_laundry_history` (
 --
 
 CREATE TABLE `lw_data_sponsor` (
-  `id` int(13) UNSIGNED NOT NULL,
+  `id` int(13) NOT NULL,
   `tgl_pengajuan` date NOT NULL,
   `nama_dokter` varchar(50) NOT NULL,
   `periode_pengajuan` date NOT NULL,
   `pengajuan_omset` int(30) NOT NULL,
-  `diskon` float NOT NULL,
+  `diskon` int(11) DEFAULT '0',
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` varchar(20) NOT NULL,
   `modified_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -374,7 +374,7 @@ CREATE TABLE `lw_data_sponsor` (
 --
 
 INSERT INTO `lw_data_sponsor` (`id`, `tgl_pengajuan`, `nama_dokter`, `periode_pengajuan`, `pengajuan_omset`, `diskon`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, '2019-01-23', 'Kalbe', '2019-01-16', 20000, 0.1, '2019-01-24 00:00:00', '', '2019-01-24 14:24:21', NULL);
+(6, '2019-01-23', 'Vanessa', '2019-01-23', 80000000, 10, '2019-01-25 06:52:36', '2', '2019-01-25 06:52:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -386,7 +386,7 @@ CREATE TABLE `lw_mast_brosur` (
   `id` int(13) UNSIGNED NOT NULL,
   `tgl_brosur_upload` date NOT NULL,
   `deskripsi` varchar(255) NOT NULL,
-  `lampiran` varchar(10) NOT NULL,
+  `lampiran` varchar(255) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` varchar(20) NOT NULL,
   `modified_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -398,7 +398,7 @@ CREATE TABLE `lw_mast_brosur` (
 --
 
 INSERT INTO `lw_mast_brosur` (`id`, `tgl_brosur_upload`, `deskripsi`, `lampiran`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, '2019-01-09', 'brosur', 'lampiran', '2019-01-24 14:23:16', '', '2019-01-24 14:23:16', NULL);
+(2, '2019-01-18', 'Desk Lampiran', 'lampiran', '2019-01-25 08:05:09', '2', '2019-01-25 08:05:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -428,7 +428,8 @@ CREATE TABLE `lw_mast_dokter` (
 --
 
 INSERT INTO `lw_mast_dokter` (`id`, `nama_dokter`, `alamat`, `telp`, `tempat_lahir`, `tgl_lahir`, `bidang`, `alamat_praktek`, `jam_praktek`, `riwayat_pengambilan`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, 'Vanessa', 'Bogor', '085718841359', 'Bogor', '1990-01-09', 'Mata', 'Jaksel', '4 jam', 'lorem Ipsum', '2019-01-24 14:28:30', '', '2019-01-24 14:28:30', NULL);
+(1, 'Vanessa', 'Bogor', '085718841359', 'Bogor', '1990-01-09', 'Mata', 'Jaksel', '4 jam', 'lorem Ipsuma', '2019-01-24 14:28:30', '', '2019-01-25 09:05:29', '2'),
+(2, 'asd', 'asd', 'a213123123123', 'Kota Bogor', '2019-01-23', 'asd', 'asd', 'asd', 'asd', '2019-01-25 09:08:15', '2', '2019-01-25 09:08:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -456,7 +457,8 @@ CREATE TABLE `lw_mast_kunjungan` (
 --
 
 INSERT INTO `lw_mast_kunjungan` (`id`, `nama_dokter`, `tgl_kunjungan`, `topik`, `komplain`, `order`, `aktifitas_kompetitor`, `photo_upload`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, 'Vanessa', '2019-01-24', 'Cek Mata', 'Mata ko tiba tiba tembus pandang', 'obat tetes mata', 'tiduran aja', 'mata.jpg', '2019-01-24 14:30:10', '', '2019-01-24 14:30:10', NULL);
+(1, 'Vanessa', '2019-01-24', 'Cek Mata', 'Mata ko tiba tiba tembus pandang', 'obat tetes mata', 'tiduran ajaa', 'mata.jpga', '2019-01-24 14:30:10', '', '2019-01-25 09:22:45', '2'),
+(2, 'asd', '2019-01-16', 'asd', 'asd', 'asd', 'asd', 'asd', '2019-01-25 09:24:16', '2', '2019-01-25 09:24:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -482,7 +484,8 @@ CREATE TABLE `lw_mast_makloon` (
 --
 
 INSERT INTO `lw_mast_makloon` (`id`, `nama_dokter`, `merk`, `tahun_makloon`, `nama_produk`, `stok`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, 'Vanessa', 'Kalbe', '2015', 'Kalbe Penjernih Mata', 15, '2019-01-24 14:31:38', '', '2019-01-24 14:31:38', NULL);
+(1, 'Vanessa', 'Kalbee', '2015', 'Kalbe Penjernih Mataa', 15, '2019-01-24 14:31:38', '', '2019-01-25 09:31:02', '2'),
+(2, 'asd', 'asd', 'asd', 'asd', 1, '2019-01-25 09:32:24', '2', '2019-01-25 09:32:24', NULL);
 
 -- --------------------------------------------------------
 
@@ -506,7 +509,9 @@ CREATE TABLE `lw_mast_medrep` (
 --
 
 INSERT INTO `lw_mast_medrep` (`id`, `nama_medrep`, `tempat_lahir`, `tgl_lahir`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
-(1, 'Lona', 'Jakarta', '2019-01-23', '2019-01-24 14:34:17', '', '2019-01-24 14:34:17', NULL);
+(1, 'Lona', 'Jakartaa', '2019-02-25', '2019-01-24 14:34:17', '', '2019-01-25 09:38:56', '2'),
+(2, 'aasd', 'Kota Bogor', '2019-01-21', '2019-01-25 09:40:12', '2', '2019-01-25 09:40:12', NULL),
+(3, 'asd', 'Kota Bogor', '2019-01-16', '2019-01-25 09:40:32', '2', '2019-01-25 09:40:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -1480,37 +1485,37 @@ ALTER TABLE `dt_task_laundry_history`
 -- AUTO_INCREMENT for table `lw_data_sponsor`
 --
 ALTER TABLE `lw_data_sponsor`
-  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `lw_mast_brosur`
 --
 ALTER TABLE `lw_mast_brosur`
-  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `lw_mast_dokter`
 --
 ALTER TABLE `lw_mast_dokter`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `lw_mast_kunjungan`
 --
 ALTER TABLE `lw_mast_kunjungan`
-  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `lw_mast_makloon`
 --
 ALTER TABLE `lw_mast_makloon`
-  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `lw_mast_medrep`
 --
 ALTER TABLE `lw_mast_medrep`
-  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ms_additional_service`

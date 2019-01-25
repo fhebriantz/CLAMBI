@@ -18,16 +18,16 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Master Sponsor</h4>
+                                    <h4 class="page-title">Master Makloon</h4>
                                     <ol class="breadcrumb p-0">
                                         <li>
                                             <a href="#">Slau</a>
                                         </li>
                                         <li>
-                                            <a href="#">Sponsor</a>
+                                            <a href="#">Makloon</a>
                                         </li>
                                         <li class="active">
-                                            Input
+                                            Edit
                                         </li>
                                     </ol>
                                     <div class="clearfix"></div>
@@ -49,7 +49,7 @@
                                                     </ul>
                                                   </div>
                                                 @endif
-                                                <form method="POST" action="{{url('/sponsor/input')}}" data-parsley-validate novalidate>
+                                                <form method="POST" action="{{url('/makloon/'.$makloon->id.'/edit')}}" data-parsley-validate novalidate>
                                                 {{ csrf_field() }}
 
                                     <div class="row">
@@ -59,35 +59,26 @@
                                             <div class="p-20">
                                                 
                                                 <div class="form-group">
-                                                    <label>Tanggal Pengajuan</label>
-                                                    <div>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" name="tgl_pengajuan" placeholder="yyyy-mm-dd" value="" autocomplete="off" id="tgl_pengajuan">
-                                                            <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
-                                                        </div><!-- input-group -->
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
                                                     <label for="nama_dokter">Nama Dokter<span class="text-danger">*</span></label>
-                                                    <input name="nama_dokter" autocomplete="off"  required  value=""  type="text" placeholder="Masukan Nama Dokter" name" class="form-control" id="nama_dokter">
+                                                    <input name="nama_dokter" autocomplete="off" required  value="{{$makloon->nama_dokter}}"  type="text" placeholder="Masukan Nama Dokter" name" class="form-control" id="nama_dokter">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Periode Pengajuan</label>
-                                                    <div>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" autocomplete="off" name="periode_pengajuan" placeholder="yyyy-mm-dd" value="" id="periode_pengajuan">
-                                                            <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
-                                                        </div><!-- input-group -->
-                                                    </div>
+                                                    <label for="merk">Merk<span class="text-danger">*</span></label>
+                                                    <input name="merk" autocomplete="off" required  value="{{$makloon->merk}}"  type="text" placeholder="Masukan Merk" name" class="form-control" id="merk">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Pengajuan Omset (Rp)</label>
-                                                    <input name="pengajuan_omset" autocomplete="off" type="number" value="" placeholder="Masukan Omset" data-parsley-type="number" class="form-control">
+                                                    <label for="tahun_makloon">Tahun Makloon<span class="text-danger">*</span></label>
+                                                    <input name="tahun_makloon" autocomplete="off" required  value="{{$makloon->tahun_makloon}}"  type="text" placeholder="Masukan Tahun Makloon" name" class="form-control" id="tahun_makloon">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Diskon (%)</label>
-                                                    <input  type="number" autocomplete="off"  name="diskon" min="0" max="100" value="" placeholder="Masukan Diskon" class="form-control">
+                                                    <label for="nama_produk">Nama Produk<span class="text-danger">*</span></label>
+                                                    <input name="nama_produk" autocomplete="off" required  value="{{$makloon->nama_produk}}"  type="text" placeholder="Masukan Nama Produk" name" class="form-control" id="nama_produk">
                                                 </div>
+                                                 <div class="form-group">
+                                                    <label for="stok">Stok<span class="text-danger">*</span></label>
+                                                    <input name="stok" max="99999" autocomplete="off" required  value="{{$makloon->stok}}"  type="number" placeholder="Masukan Stok" name" class="form-control" id="stok">
+                                                </div>
+                                                
                                                 
                                             </div>
 
@@ -108,6 +99,7 @@
                                             Batal
                                         </a>
                                     </div>
+                                <input type="hidden" name="_method" value="PUT">
                             </form>
                                     <!-- end row -->
                     </div>
@@ -132,7 +124,7 @@
         <script>
             $(document).ready(function() {
           $('#summernote').summernote();
-          $('#tgl_pengajuan').datepicker({
+          $('#tgl_makloon').datepicker({
                 
                     "format": "yyyy-mm-dd"
                 

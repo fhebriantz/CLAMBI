@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Master Sponsor</h4>
+                                    <h4 class="page-title">Master Kunjungan</h4>
                                     <ol class="breadcrumb p-0">
                                         <li>
                                             <a href="#">Uplon</a>
@@ -29,7 +29,7 @@
                                             <a href="#">Tables</a>
                                         </li>
                                         <li class="active">
-                                            Sponsor
+                                            Kunjungan
                                         </li>
                                     </ol>
                                     <div class="clearfix"></div>
@@ -41,14 +41,19 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box table-responsive">
-                                    <a href="{{url('sponsor/input')}}" class="btn btn-info m-b-20">Tambah</a>
+                                    <a href="{{url('kunjungan/input')}}" class="btn btn-info m-b-20">Tambah</a>
 
                                     <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Dokter</th>
-                                                <th>Omset</th>
+                                                <th>Tgl Kunjungan</th>
+                                                <th>Topik</th>
+                                                <th>Komplain</th>
+                                                <th>Order</th>
+                                                <th>Aktifitas Kompetitor</th>
+                                                <th>Foto Upload</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -56,16 +61,21 @@
 
                                         <tbody>             
                                             <?php $no = 1; ?>
-                                            @foreach($sponsor as $sponsor)
+                                            @foreach($kunjungan as $kunjungan)
                                             <tr>
                                                 <td>{{$no++}}</td>
-                                                <td>{{$sponsor->nama_dokter}}</td>
-                                                <td class="autonumber" data-a-sign="Rp ">{{$sponsor->pengajuan_omset}}</td>
+                                                <td>{{$kunjungan->nama_dokter}}</td>
+                                                <td>{{$kunjungan->tgl_kunjungan}}</td>
+                                                <td>{{$kunjungan->topik}}</td>
+                                                <td>{{$kunjungan->komplain}}</td>
+                                                <td>{{$kunjungan->order}}</td>
+                                                <td>{{$kunjungan->aktifitas_kompetitor}}</td>
+                                                <td>{{$kunjungan->photo_upload}}</td>
                                                 <td>
-                                                    <a class="btn btn-action marginright btn-pencil-list" href="{{url('sponsor/'.$sponsor->id.'/edit')}}"><img class="pencil-list" src="{{ asset('images/icon/pencil.png')}}" alt="" ></a>
-                                                    <form method="POST" style="display: inline-block;" action="{{url('/sponsor/'.$sponsor->id.'/delete')}}">
+                                                    <a class="btn btn-action marginright btn-pencil-list" href="{{url('kunjungan/'.$kunjungan->id.'/edit')}}"><img class="pencil-list" src="{{ asset('images/icon/pencil.png')}}" alt="" ></a>
+                                                    <form method="POST" style="display: inline-block;" action="{{url('/kunjungan/'.$kunjungan->id.'/delete')}}">
                                                     {{ csrf_field() }}
-                                                    <button class="btn btn-action marginright btn-trash-list" type="submit" name="delete" onclick="return confirm('Are you sure want to delete name {{$sponsor->nama_dokter}}?');"><img class="trash-list" src="{{ asset('images/icon/trash.png')}}" alt=""></button> 
+                                                    <button class="btn btn-action marginright btn-trash-list" type="submit" name="delete" onclick="return confirm('Are you sure want to delete name {{$kunjungan->nama_kunjungan}}?');"><img class="trash-list" src="{{ asset('images/icon/trash.png')}}" alt=""></button> 
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     </form>
                                                 </td>

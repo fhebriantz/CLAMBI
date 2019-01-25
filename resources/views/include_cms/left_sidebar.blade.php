@@ -82,25 +82,22 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-blur-linear"></i><span>Master Dokter</span> <span class="menu-arrow"></span></a>
                                 <ul>
                                     <li class="has_sub">
-                                        <a href="{{ url('/additional')}}" class="waves-effect"><span>Master Sponsor</span></a>
+                                        <a href="{{ url('/sponsor')}}" class="waves-effect"><span>Master Sponsor</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/customer')}}" class="waves-effect"><span>Master Brosur</span></a>
+                                        <a href="{{ url('/brosur')}}" class="waves-effect"><span>Master Brosur</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/laundryservice')}}" class="waves-effect"><span>Master Dokter</span></a>
+                                        <a href="{{ url('/dokter')}}" class="waves-effect"><span>Master Dokter</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/outlet')}}" class="waves-effect"><span>Master Kunjungan</span></a>
+                                        <a href="{{ url('/kunjungan')}}" class="waves-effect"><span>Master Kunjungan</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/outletuser')}}" class="waves-effect"><span>Master Makloon</span></a>
+                                        <a href="{{ url('/makloon')}}" class="waves-effect"><span>Master Makloon</span></a>
                                     </li>
                                     <li class="has_sub">
-                                        <a href="{{ url('/package')}}" class="waves-effect"><span>Master Medrep</span></a>
-                                    </li>
-                                    <li class="has_sub">
-                                        <a href="{{ url('/promo')}}" class="waves-effect"><span>Master User</span></a>
+                                        <a href="{{ url('/medrep')}}" class="waves-effect"><span>Master Medrep</span></a>
                                     </li>
                                 </ul>
                             </li>
