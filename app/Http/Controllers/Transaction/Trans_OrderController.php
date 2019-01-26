@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use vendor\autoload;
 use App\Http\Model\Trans_Order;
+use App\Http\Model\Trans_Tagihan;
 use App\Http\Model\Det_Order;
 use App\Http\Model\Mast_Dokter;
 use App\Http\Model\Mast_Medrep;
@@ -121,8 +122,15 @@ class Trans_OrderController extends Controller
                 'id_medrep' => 'required',
                 'id_dokter' => 'required',
                 'id_so' => 'required',
+                'no_so' => 'required',
                 'tgl_so' => 'required',
                 'tgl_trans_order' => 'required',
+
+
+                'tgl_tagihan' => 'required',
+                'id_faktur' => 'required',
+                'tgl_faktur' => 'required',
+                'is_lunas' => 'required',
             ]);
 
         $order = new Trans_Order;
@@ -131,11 +139,23 @@ class Trans_OrderController extends Controller
             $order->id_medrep = $request->id_medrep; 
             $order->id_dokter = $request->id_dokter; 
             $order->id_so = $request->id_so; 
+            $order->no_so = $request->no_so; 
             $order->tgl_so = $request->tgl_so; 
             $order->tgl_trans_order = $request->tgl_trans_order;
             $order->created_by = session()->get('session_id');  
 
         $order->save();
+
+        $tagihan = new Trans_Tagihan;
+
+            $tagihan->id_trans_order = $request->id_trans_order; 
+            $tagihan->id_faktur = $request->id_faktur; 
+            $tagihan->tgl_faktur = $request->tgl_faktur; 
+            $tagihan->tgl_tagihan = $request->tgl_tagihan; 
+            $tagihan->is_lunas = $request->is_lunas; 
+            $tagihan->created_by = session()->get('session_id');  
+
+        $tagihan->save();
 
         return  redirect('detail/'.$request->id_trans_order.'/input/');
     }
@@ -147,8 +167,14 @@ class Trans_OrderController extends Controller
                 'id_medrep' => 'required',
                 'id_dokter' => 'required',
                 'id_so' => 'required',
+                'no_so' => 'required',
                 'tgl_so' => 'required',
                 'tgl_trans_order' => 'required',
+
+                'tgl_tagihan' => 'required',
+                'id_faktur' => 'required',
+                'tgl_faktur' => 'required',
+                'is_lunas' => 'required',
 
             ]);
 
@@ -157,11 +183,23 @@ class Trans_OrderController extends Controller
             $order->id_medrep = $request->id_medrep; 
             $order->id_dokter = $request->id_dokter; 
             $order->id_so = $request->id_so; 
+            $order->no_so = $request->no_so; 
             $order->tgl_so = $request->tgl_so; 
             $order->tgl_trans_order = $request->tgl_trans_order; 
             $order->modified_by = session()->get('session_id');  
 
         $order->save();
+
+        $tagihan = Trans_Tagihan::where('id_trans_order','=',$order->id_trans_order)->first();
+
+            $tagihan->id_trans_order = $order->id_trans_order; 
+            $tagihan->id_faktur = $request->id_faktur; 
+            $tagihan->tgl_faktur = $request->tgl_faktur; 
+            $tagihan->tgl_tagihan = $request->tgl_tagihan; 
+            $tagihan->is_lunas = $request->is_lunas; 
+            $tagihan->modified_by = session()->get('session_id');    
+
+        $tagihan->save();
 
         return  redirect('/order');
     }

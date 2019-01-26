@@ -16,7 +16,7 @@
 
         <!-- App CSS -->
         <link href="{{ asset('/css/style.css?v=0.001')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/css/custom.css?v=0.002')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/css/custom.css?v=0.004')}}" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

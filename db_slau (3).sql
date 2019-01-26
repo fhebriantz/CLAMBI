@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jan 2019 pada 22.59
--- Versi server: 10.1.34-MariaDB
--- Versi PHP: 7.2.7
+-- Generation Time: Jan 26, 2019 at 08:43 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ci_sessions`
+-- Table structure for table `ci_sessions`
 --
 
 CREATE TABLE `ci_sessions` (
@@ -36,7 +36,7 @@ CREATE TABLE `ci_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ci_sessions`
+-- Dumping data for table `ci_sessions`
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_item_laundry`
+-- Table structure for table `dt_item_laundry`
 --
 
 CREATE TABLE `dt_item_laundry` (
@@ -78,7 +78,7 @@ CREATE TABLE `dt_item_laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_item_laundry`
+-- Dumping data for table `dt_item_laundry`
 --
 
 INSERT INTO `dt_item_laundry` (`id`, `id_laundry`, `item`, `type`, `price`, `price_dryclean`, `qty`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -92,7 +92,7 @@ INSERT INTO `dt_item_laundry` (`id`, `id_laundry`, `item`, `type`, `price`, `pri
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_item_laundry_history`
+-- Table structure for table `dt_item_laundry_history`
 --
 
 CREATE TABLE `dt_item_laundry_history` (
@@ -113,7 +113,7 @@ CREATE TABLE `dt_item_laundry_history` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_payment_deposit`
+-- Table structure for table `dt_payment_deposit`
 --
 
 CREATE TABLE `dt_payment_deposit` (
@@ -131,7 +131,7 @@ CREATE TABLE `dt_payment_deposit` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_payment_deposit_history`
+-- Table structure for table `dt_payment_deposit_history`
 --
 
 CREATE TABLE `dt_payment_deposit_history` (
@@ -149,7 +149,7 @@ CREATE TABLE `dt_payment_deposit_history` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_payment_laundry`
+-- Table structure for table `dt_payment_laundry`
 --
 
 CREATE TABLE `dt_payment_laundry` (
@@ -169,7 +169,7 @@ CREATE TABLE `dt_payment_laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_payment_laundry`
+-- Dumping data for table `dt_payment_laundry`
 --
 
 INSERT INTO `dt_payment_laundry` (`id`, `id_laundry`, `type`, `payment_type`, `amount`, `account_bank`, `account_holder`, `payment_date`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -184,7 +184,7 @@ INSERT INTO `dt_payment_laundry` (`id`, `id_laundry`, `type`, `payment_type`, `a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_payment_laundry_history`
+-- Table structure for table `dt_payment_laundry_history`
 --
 
 CREATE TABLE `dt_payment_laundry_history` (
@@ -204,7 +204,7 @@ CREATE TABLE `dt_payment_laundry_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_payment_laundry_history`
+-- Dumping data for table `dt_payment_laundry_history`
 --
 
 INSERT INTO `dt_payment_laundry_history` (`id`, `id_laundry`, `type`, `payment_type`, `amount`, `account_bank`, `account_holder`, `payment_date`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -214,7 +214,7 @@ INSERT INTO `dt_payment_laundry_history` (`id`, `id_laundry`, `type`, `payment_t
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_picture_laundry`
+-- Table structure for table `dt_picture_laundry`
 --
 
 CREATE TABLE `dt_picture_laundry` (
@@ -232,7 +232,7 @@ CREATE TABLE `dt_picture_laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_picture_laundry`
+-- Dumping data for table `dt_picture_laundry`
 --
 
 INSERT INTO `dt_picture_laundry` (`id`, `id_laundry`, `picture`, `picture_type`, `picture_url`, `caption`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -242,7 +242,7 @@ INSERT INTO `dt_picture_laundry` (`id`, `id_laundry`, `picture`, `picture_type`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_picture_laundry_history`
+-- Table structure for table `dt_picture_laundry_history`
 --
 
 CREATE TABLE `dt_picture_laundry_history` (
@@ -262,7 +262,7 @@ CREATE TABLE `dt_picture_laundry_history` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_survey_form`
+-- Table structure for table `dt_survey_form`
 --
 
 CREATE TABLE `dt_survey_form` (
@@ -285,7 +285,7 @@ CREATE TABLE `dt_survey_form` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_survey_form`
+-- Dumping data for table `dt_survey_form`
 --
 
 INSERT INTO `dt_survey_form` (`id`, `nama_laundry`, `alamat_laundry`, `nama_lengkap`, `no_telp`, `foto_1`, `foto_2`, `any_system`, `created_by`, `created_date`, `modified_by`, `modified_date`, `question_1`, `question_2`, `question_3`, `question_4`) VALUES
@@ -295,7 +295,7 @@ INSERT INTO `dt_survey_form` (`id`, `nama_laundry`, `alamat_laundry`, `nama_leng
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_task_laundry`
+-- Table structure for table `dt_task_laundry`
 --
 
 CREATE TABLE `dt_task_laundry` (
@@ -312,7 +312,7 @@ CREATE TABLE `dt_task_laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dt_task_laundry`
+-- Dumping data for table `dt_task_laundry`
 --
 
 INSERT INTO `dt_task_laundry` (`id`, `id_laundry`, `outlet_user`, `comment`, `status`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -334,7 +334,7 @@ INSERT INTO `dt_task_laundry` (`id`, `id_laundry`, `outlet_user`, `comment`, `st
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dt_task_laundry_history`
+-- Table structure for table `dt_task_laundry_history`
 --
 
 CREATE TABLE `dt_task_laundry_history` (
@@ -353,7 +353,7 @@ CREATE TABLE `dt_task_laundry_history` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_data_sponsor`
+-- Table structure for table `lw_data_sponsor`
 --
 
 CREATE TABLE `lw_data_sponsor` (
@@ -370,7 +370,7 @@ CREATE TABLE `lw_data_sponsor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_data_sponsor`
+-- Dumping data for table `lw_data_sponsor`
 --
 
 INSERT INTO `lw_data_sponsor` (`id`, `tgl_pengajuan`, `nama_dokter`, `periode_pengajuan`, `pengajuan_omset`, `diskon`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -380,7 +380,7 @@ INSERT INTO `lw_data_sponsor` (`id`, `tgl_pengajuan`, `nama_dokter`, `periode_pe
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_detail_trans_order`
+-- Table structure for table `lw_detail_trans_order`
 --
 
 CREATE TABLE `lw_detail_trans_order` (
@@ -397,7 +397,7 @@ CREATE TABLE `lw_detail_trans_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_detail_trans_order`
+-- Dumping data for table `lw_detail_trans_order`
 --
 
 INSERT INTO `lw_detail_trans_order` (`id`, `id_trans_order`, `qty`, `kemasan`, `ukuran`, `harga`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -413,12 +413,17 @@ INSERT INTO `lw_detail_trans_order` (`id`, `id_trans_order`, `qty`, `kemasan`, `
 (22, 1548453979, 1, 'kelapas', '1', 1, '2019-01-25 21:12:37', '2', '2019-01-25 21:12:44', '2'),
 (23, 1548453979, 1, 'kopi', '1', 1, '2019-01-25 21:14:48', '2', '2019-01-25 21:14:48', NULL),
 (24, 1548454664, 1, 'asde', '1', 1, '2019-01-25 21:18:00', '2', '2019-01-25 21:43:09', '2'),
-(30, 1548454826, 52, '55', '5', 5, '2019-01-25 21:39:10', '2', '2019-01-25 21:39:36', '2');
+(30, 1548454826, 52, '55', '5', 5, '2019-01-25 21:39:10', '2', '2019-01-25 21:39:36', '2'),
+(31, 1548486774, 3, 'baju', '3', 3000, '2019-01-26 06:13:19', '2', '2019-01-26 06:13:19', NULL),
+(32, 1548486774, 2, 'celana', '2', 2000, '2019-01-26 06:13:31', '2', '2019-01-26 06:13:31', NULL),
+(34, 1548489363, 1, 'Baju', '1', 1, '2019-01-26 06:56:22', '2', '2019-01-26 06:56:22', NULL),
+(35, 1548492085, 111, 'basatu', '111', 111, '2019-01-26 07:41:55', '2', '2019-01-26 07:41:55', NULL),
+(36, 1548492085, 222, 'badua', '222', 222, '2019-01-26 07:42:03', '2', '2019-01-26 07:42:03', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_mast_brosur`
+-- Table structure for table `lw_mast_brosur`
 --
 
 CREATE TABLE `lw_mast_brosur` (
@@ -433,7 +438,7 @@ CREATE TABLE `lw_mast_brosur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_mast_brosur`
+-- Dumping data for table `lw_mast_brosur`
 --
 
 INSERT INTO `lw_mast_brosur` (`id`, `tgl_brosur_upload`, `deskripsi`, `lampiran`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -442,7 +447,7 @@ INSERT INTO `lw_mast_brosur` (`id`, `tgl_brosur_upload`, `deskripsi`, `lampiran`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_mast_dokter`
+-- Table structure for table `lw_mast_dokter`
 --
 
 CREATE TABLE `lw_mast_dokter` (
@@ -463,7 +468,7 @@ CREATE TABLE `lw_mast_dokter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_mast_dokter`
+-- Dumping data for table `lw_mast_dokter`
 --
 
 INSERT INTO `lw_mast_dokter` (`id`, `nama_dokter`, `alamat`, `telp`, `tempat_lahir`, `tgl_lahir`, `bidang`, `alamat_praktek`, `jam_praktek`, `riwayat_pengambilan`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -473,7 +478,7 @@ INSERT INTO `lw_mast_dokter` (`id`, `nama_dokter`, `alamat`, `telp`, `tempat_lah
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_mast_kunjungan`
+-- Table structure for table `lw_mast_kunjungan`
 --
 
 CREATE TABLE `lw_mast_kunjungan` (
@@ -492,7 +497,7 @@ CREATE TABLE `lw_mast_kunjungan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_mast_kunjungan`
+-- Dumping data for table `lw_mast_kunjungan`
 --
 
 INSERT INTO `lw_mast_kunjungan` (`id`, `nama_dokter`, `tgl_kunjungan`, `topik`, `komplain`, `order`, `aktifitas_kompetitor`, `photo_upload`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -502,7 +507,7 @@ INSERT INTO `lw_mast_kunjungan` (`id`, `nama_dokter`, `tgl_kunjungan`, `topik`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_mast_makloon`
+-- Table structure for table `lw_mast_makloon`
 --
 
 CREATE TABLE `lw_mast_makloon` (
@@ -519,7 +524,7 @@ CREATE TABLE `lw_mast_makloon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_mast_makloon`
+-- Dumping data for table `lw_mast_makloon`
 --
 
 INSERT INTO `lw_mast_makloon` (`id`, `nama_dokter`, `merk`, `tahun_makloon`, `nama_produk`, `stok`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -529,7 +534,7 @@ INSERT INTO `lw_mast_makloon` (`id`, `nama_dokter`, `merk`, `tahun_makloon`, `na
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_mast_medrep`
+-- Table structure for table `lw_mast_medrep`
 --
 
 CREATE TABLE `lw_mast_medrep` (
@@ -544,7 +549,7 @@ CREATE TABLE `lw_mast_medrep` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_mast_medrep`
+-- Dumping data for table `lw_mast_medrep`
 --
 
 INSERT INTO `lw_mast_medrep` (`id`, `nama_medrep`, `tempat_lahir`, `tgl_lahir`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
@@ -555,7 +560,7 @@ INSERT INTO `lw_mast_medrep` (`id`, `nama_medrep`, `tempat_lahir`, `tgl_lahir`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_trans_order`
+-- Table structure for table `lw_trans_order`
 --
 
 CREATE TABLE `lw_trans_order` (
@@ -565,6 +570,7 @@ CREATE TABLE `lw_trans_order` (
   `id_dokter` int(13) NOT NULL,
   `id_so` int(13) NOT NULL,
   `tgl_so` date NOT NULL,
+  `no_so` int(11) NOT NULL,
   `tgl_trans_order` date NOT NULL,
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` varchar(255) NOT NULL,
@@ -574,41 +580,39 @@ CREATE TABLE `lw_trans_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lw_trans_order`
+-- Dumping data for table `lw_trans_order`
 --
 
-INSERT INTO `lw_trans_order` (`id`, `id_trans_order`, `id_medrep`, `id_dokter`, `id_so`, `tgl_so`, `tgl_trans_order`, `created_date`, `created_by`, `modified_date`, `modified_by`, `is_active`) VALUES
-(1, 123, 1, 2, 1, '2019-01-18', '2019-01-17', '2019-01-26 00:03:27', '', '2019-01-25 21:15:14', '2', 0),
-(2, 456, 2, 2, 1, '2019-01-11', '2019-01-11', '2019-01-26 00:06:22', '', '2019-01-25 21:15:11', '2', 0),
-(3, 1548449661, 1, 1, 1, '2019-01-05', '2019-01-05', '2019-01-25 19:54:42', '2', '2019-01-25 21:16:14', NULL, 0),
-(4, 1548450864, 2, 1, 21, '2019-01-16', '2019-01-16', '2019-01-25 20:14:45', '2', '2019-01-25 21:19:09', NULL, 0),
-(5, 1548451161, 2, 2, 1, '2019-01-26', '2019-01-29', '2019-01-25 20:19:29', '2', '2019-01-25 20:19:29', NULL, 0),
-(6, 1548452192, 1, 2, 76, '2019-01-14', '2019-01-14', '2019-01-25 20:36:46', '2', '2019-01-25 20:36:46', NULL, 0),
-(7, 1548453456, 1, 1, 1, '2019-01-01', '2019-01-01', '2019-01-25 20:57:48', '2', '2019-01-25 20:57:48', NULL, 0),
-(8, 1548453478, 1, 2, 123, '2019-01-16', '2019-01-17', '2019-01-25 20:58:10', '2', '2019-01-25 20:58:10', NULL, 0),
-(9, 1548453512, 1, 1, 5, '2019-01-22', '2019-01-23', '2019-01-25 20:58:43', '2', '2019-01-25 20:58:43', NULL, 0),
-(10, 1548453652, 1, 2, 12, '2019-01-22', '2019-01-17', '2019-01-25 21:00:59', '2', '2019-01-25 21:00:59', NULL, 0),
-(11, 1548453749, 2, 2, 12, '2019-01-28', '2019-01-22', '2019-01-25 21:02:38', '2', '2019-01-25 21:02:38', NULL, 0),
-(12, 1548453903, 2, 1, 1, '2019-01-30', '2019-01-10', '2019-01-25 21:05:10', '2', '2019-01-25 21:05:10', NULL, 0),
-(13, 1548453979, 1, 1, 1, '2019-01-22', '2019-01-30', '2019-01-25 21:06:29', '2', '2019-01-25 21:15:08', '2', 0),
-(14, 1548454664, 1, 1, 12, '2019-01-31', '2019-01-31', '2019-01-25 21:17:52', '2', '2019-01-25 21:46:16', '2', 0),
-(15, 1548454826, 1, 1, 1, '2019-01-23', '2019-11-27', '2019-01-25 21:20:35', '2', '2019-01-25 21:38:47', '2', 1);
+INSERT INTO `lw_trans_order` (`id`, `id_trans_order`, `id_medrep`, `id_dokter`, `id_so`, `tgl_so`, `no_so`, `tgl_trans_order`, `created_date`, `created_by`, `modified_date`, `modified_by`, `is_active`) VALUES
+(1, 123, 1, 2, 1, '2019-01-18', 0, '2019-01-17', '2019-01-26 00:03:27', '', '2019-01-25 21:15:14', '2', 0),
+(2, 456, 2, 2, 1, '2019-01-11', 0, '2019-01-11', '2019-01-26 00:06:22', '', '2019-01-25 21:15:11', '2', 0),
+(3, 1548449661, 1, 1, 1, '2019-01-05', 0, '2019-01-05', '2019-01-25 19:54:42', '2', '2019-01-25 21:16:14', NULL, 0),
+(4, 1548450864, 2, 1, 21, '2019-01-16', 0, '2019-01-16', '2019-01-25 20:14:45', '2', '2019-01-25 21:19:09', NULL, 0),
+(5, 1548451161, 2, 2, 1, '2019-01-26', 0, '2019-01-29', '2019-01-25 20:19:29', '2', '2019-01-25 20:19:29', NULL, 0),
+(6, 1548452192, 1, 2, 76, '2019-01-14', 0, '2019-01-14', '2019-01-25 20:36:46', '2', '2019-01-25 20:36:46', NULL, 0),
+(7, 1548453456, 1, 1, 1, '2019-01-01', 0, '2019-01-01', '2019-01-25 20:57:48', '2', '2019-01-25 20:57:48', NULL, 0),
+(8, 1548453478, 1, 2, 123, '2019-01-16', 0, '2019-01-17', '2019-01-25 20:58:10', '2', '2019-01-25 20:58:10', NULL, 0),
+(9, 1548453512, 1, 1, 5, '2019-01-22', 0, '2019-01-23', '2019-01-25 20:58:43', '2', '2019-01-25 20:58:43', NULL, 0),
+(10, 1548453652, 1, 2, 12, '2019-01-22', 0, '2019-01-17', '2019-01-25 21:00:59', '2', '2019-01-25 21:00:59', NULL, 0),
+(11, 1548453749, 2, 2, 12, '2019-01-28', 0, '2019-01-22', '2019-01-25 21:02:38', '2', '2019-01-25 21:02:38', NULL, 0),
+(12, 1548453903, 2, 1, 1, '2019-01-30', 0, '2019-01-10', '2019-01-25 21:05:10', '2', '2019-01-25 21:05:10', NULL, 0),
+(13, 1548453979, 1, 1, 1, '2019-01-22', 0, '2019-01-30', '2019-01-25 21:06:29', '2', '2019-01-25 21:15:08', '2', 0),
+(14, 1548454664, 1, 1, 12, '2019-01-31', 0, '2019-01-31', '2019-01-25 21:17:52', '2', '2019-01-25 21:46:16', '2', 0),
+(15, 1548454826, 1, 1, 1, '2019-01-23', 2, '2019-11-27', '2019-01-25 21:20:35', '2', '2019-01-26 06:55:52', '2', 1),
+(16, 1548486774, 1, 2, 76, '2019-01-16', 4, '2019-01-18', '2019-01-26 06:13:07', '2', '2019-01-26 06:55:56', '2', 1),
+(17, 1548489363, 3, 2, 12, '2019-01-16', 32, '2019-01-23', '2019-01-26 06:56:13', '2', '2019-01-26 06:56:24', '2', 1),
+(18, 1548492085, 1, 2, 111, '2019-01-01', 111, '2019-01-01', '2019-01-26 07:41:44', '2', '2019-01-26 07:42:06', '2', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_trans_penerimaan`
+-- Table structure for table `lw_trans_penerimaan`
 --
 
 CREATE TABLE `lw_trans_penerimaan` (
-  `id` int(11) NOT NULL,
-  `id_trans_penerimaan` int(13) UNSIGNED NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL,
   `id_trans_order` int(13) NOT NULL,
   `tgl_trans_order` date NOT NULL,
-  `no_so` int(13) NOT NULL,
-  `tgl_so` date NOT NULL,
-  `id_medrep` int(13) NOT NULL,
-  `id_dokter` int(13) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` varchar(255) NOT NULL,
   `modified_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -618,18 +622,13 @@ CREATE TABLE `lw_trans_penerimaan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_trans_tagihan`
+-- Table structure for table `lw_trans_tagihan`
 --
 
 CREATE TABLE `lw_trans_tagihan` (
-  `id` int(11) NOT NULL,
-  `id_tagihan` int(13) UNSIGNED NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL,
+  `id_trans_order` int(11) NOT NULL,
   `tgl_tagihan` date NOT NULL,
-  `no_so` int(13) NOT NULL,
-  `tgl_so` date NOT NULL,
-  `id_medrep` int(13) NOT NULL,
-  `nama_medrep` varchar(50) NOT NULL,
-  `id_dokter` int(13) NOT NULL,
   `id_faktur` int(13) NOT NULL,
   `is_lunas` int(4) NOT NULL,
   `tgl_faktur` date NOT NULL,
@@ -639,10 +638,18 @@ CREATE TABLE `lw_trans_tagihan` (
   `modified_by` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `lw_trans_tagihan`
+--
+
+INSERT INTO `lw_trans_tagihan` (`id`, `id_trans_order`, `tgl_tagihan`, `id_faktur`, `is_lunas`, `tgl_faktur`, `created_date`, `created_by`, `modified_date`, `modified_by`) VALUES
+(1, 1548489363, '2019-01-03', 123, 0, '2019-01-08', '2019-01-26 14:19:52', '', '2019-01-26 07:36:43', '2'),
+(2, 1548492085, '2019-01-02', 211, 1, '2019-01-02', '2019-01-26 07:41:44', '2', '2019-01-26 07:42:23', '2');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_user`
+-- Table structure for table `lw_user`
 --
 
 CREATE TABLE `lw_user` (
@@ -663,7 +670,7 @@ CREATE TABLE `lw_user` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lw_user_group`
+-- Table structure for table `lw_user_group`
 --
 
 CREATE TABLE `lw_user_group` (
@@ -680,7 +687,7 @@ CREATE TABLE `lw_user_group` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_additional_service`
+-- Table structure for table `ms_additional_service`
 --
 
 CREATE TABLE `ms_additional_service` (
@@ -697,7 +704,7 @@ CREATE TABLE `ms_additional_service` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_additional_service`
+-- Dumping data for table `ms_additional_service`
 --
 
 INSERT INTO `ms_additional_service` (`id`, `id_outlet`, `item`, `price`, `description`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -708,7 +715,7 @@ INSERT INTO `ms_additional_service` (`id`, `id_outlet`, `item`, `price`, `descri
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_coupon`
+-- Table structure for table `ms_coupon`
 --
 
 CREATE TABLE `ms_coupon` (
@@ -731,7 +738,7 @@ CREATE TABLE `ms_coupon` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_customer`
+-- Table structure for table `ms_customer`
 --
 
 CREATE TABLE `ms_customer` (
@@ -761,7 +768,7 @@ CREATE TABLE `ms_customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_customer`
+-- Dumping data for table `ms_customer`
 --
 
 INSERT INTO `ms_customer` (`id`, `id_mscustomer`, `id_outlet`, `fullname`, `gender`, `handphone`, `email`, `address`, `provinsi`, `kecamatan`, `kelurahan`, `kab_kota`, `kodepos`, `username`, `password`, `reset_password`, `link_verification`, `is_membership`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -812,7 +819,7 @@ INSERT INTO `ms_customer` (`id`, `id_mscustomer`, `id_outlet`, `fullname`, `gend
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_laundry_service`
+-- Table structure for table `ms_laundry_service`
 --
 
 CREATE TABLE `ms_laundry_service` (
@@ -831,7 +838,7 @@ CREATE TABLE `ms_laundry_service` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_laundry_service`
+-- Dumping data for table `ms_laundry_service`
 --
 
 INSERT INTO `ms_laundry_service` (`id`, `id_outlet`, `item`, `type`, `description`, `price`, `price_dryclean`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -852,7 +859,7 @@ INSERT INTO `ms_laundry_service` (`id`, `id_outlet`, `item`, `type`, `descriptio
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_outlet`
+-- Table structure for table `ms_outlet`
 --
 
 CREATE TABLE `ms_outlet` (
@@ -874,7 +881,7 @@ CREATE TABLE `ms_outlet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_outlet`
+-- Dumping data for table `ms_outlet`
 --
 
 INSERT INTO `ms_outlet` (`id`, `id_msoutlet`, `id_headoffice`, `outlet_name`, `address`, `phone_number`, `email`, `deposit_nominal`, `is_headoffice`, `is_branch`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -885,7 +892,7 @@ INSERT INTO `ms_outlet` (`id`, `id_msoutlet`, `id_headoffice`, `outlet_name`, `a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_outlet_user`
+-- Table structure for table `ms_outlet_user`
 --
 
 CREATE TABLE `ms_outlet_user` (
@@ -912,7 +919,7 @@ CREATE TABLE `ms_outlet_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_outlet_user`
+-- Dumping data for table `ms_outlet_user`
 --
 
 INSERT INTO `ms_outlet_user` (`id`, `id_msoutlet_user`, `id_user_group`, `id_outlet`, `fullname`, `address`, `gender`, `handphone`, `email`, `username`, `password`, `verification_code`, `is_verified`, `is_superadmin`, `is_active`, `last_login`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -925,7 +932,7 @@ INSERT INTO `ms_outlet_user` (`id`, `id_msoutlet_user`, `id_user_group`, `id_out
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_package`
+-- Table structure for table `ms_package`
 --
 
 CREATE TABLE `ms_package` (
@@ -942,7 +949,7 @@ CREATE TABLE `ms_package` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_package`
+-- Dumping data for table `ms_package`
 --
 
 INSERT INTO `ms_package` (`id`, `title`, `description`, `type`, `price`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -953,7 +960,7 @@ INSERT INTO `ms_package` (`id`, `title`, `description`, `type`, `price`, `is_act
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_promo`
+-- Table structure for table `ms_promo`
 --
 
 CREATE TABLE `ms_promo` (
@@ -974,7 +981,7 @@ CREATE TABLE `ms_promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_promo`
+-- Dumping data for table `ms_promo`
 --
 
 INSERT INTO `ms_promo` (`id`, `id_outlet`, `promo_code`, `promo_name`, `nominal`, `type`, `description`, `start_date`, `end_date`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -985,7 +992,7 @@ INSERT INTO `ms_promo` (`id`, `id_outlet`, `promo_code`, `promo_name`, `nominal`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_user_group`
+-- Table structure for table `ms_user_group`
 --
 
 CREATE TABLE `ms_user_group` (
@@ -1000,7 +1007,7 @@ CREATE TABLE `ms_user_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_user_group`
+-- Dumping data for table `ms_user_group`
 --
 
 INSERT INTO `ms_user_group` (`id`, `title`, `description`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -1011,7 +1018,7 @@ INSERT INTO `ms_user_group` (`id`, `title`, `description`, `is_active`, `created
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ms_user_mgmt`
+-- Table structure for table `ms_user_mgmt`
 --
 
 CREATE TABLE `ms_user_mgmt` (
@@ -1029,7 +1036,7 @@ CREATE TABLE `ms_user_mgmt` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ms_user_mgmt`
+-- Dumping data for table `ms_user_mgmt`
 --
 
 INSERT INTO `ms_user_mgmt` (`id`, `fullname`, `username`, `password`, `is_superadmin`, `is_active`, `last_login`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -1039,7 +1046,7 @@ INSERT INTO `ms_user_mgmt` (`id`, `fullname`, `username`, `password`, `is_supera
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `system_log`
+-- Table structure for table `system_log`
 --
 
 CREATE TABLE `system_log` (
@@ -1053,7 +1060,7 @@ CREATE TABLE `system_log` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tr_laundry`
+-- Table structure for table `tr_laundry`
 --
 
 CREATE TABLE `tr_laundry` (
@@ -1098,7 +1105,7 @@ CREATE TABLE `tr_laundry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tr_laundry`
+-- Dumping data for table `tr_laundry`
 --
 
 INSERT INTO `tr_laundry` (`id`, `id_trlaundry`, `id_outlet`, `employee_name`, `cust_fullname`, `cust_gender`, `cust_handphone`, `cust_address`, `cust_provinsi`, `cust_kecamatan`, `cust_kelurahan`, `cust_kabkota`, `cust_kodepos`, `addservice_item`, `addservice_price`, `date_in`, `date_start`, `date_end`, `date_end_estimated`, `date_out`, `date_pickup`, `date_delivery`, `promo_code`, `promo_name`, `promo_nominal`, `promo_type`, `total_payment`, `qty_satuan`, `qty_kiloan`, `status`, `is_express`, `is_pickup`, `is_delivery`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -1110,7 +1117,7 @@ INSERT INTO `tr_laundry` (`id`, `id_trlaundry`, `id_outlet`, `employee_name`, `c
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tr_laundry_history`
+-- Table structure for table `tr_laundry_history`
 --
 
 CREATE TABLE `tr_laundry_history` (
@@ -1150,7 +1157,7 @@ CREATE TABLE `tr_laundry_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tr_laundry_history`
+-- Dumping data for table `tr_laundry_history`
 --
 
 INSERT INTO `tr_laundry_history` (`id`, `id_trlaundry`, `id_outlet`, `employee_name`, `cust_fullname`, `cust_gender`, `cust_handphone`, `cust_address`, `cust_provinsi`, `cust_kecamatan`, `cust_kelurahan`, `cust_kabkota`, `cust_kodepos`, `addservice_item`, `addservice_price`, `date_in`, `date_start`, `date_end`, `date_end_estimated`, `date_out`, `id_promo`, `total_payment`, `qty_satuan`, `qty_kiloan`, `status`, `is_express`, `is_pickup`, `is_delivery`, `is_active`, `created_by`, `created_date`, `modified_by`, `modified_date`) VALUES
@@ -1162,7 +1169,7 @@ INSERT INTO `tr_laundry_history` (`id`, `id_trlaundry`, `id_outlet`, `employee_n
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tr_user_deposit`
+-- Table structure for table `tr_user_deposit`
 --
 
 CREATE TABLE `tr_user_deposit` (
@@ -1186,7 +1193,7 @@ CREATE TABLE `tr_user_deposit` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tr_user_package`
+-- Table structure for table `tr_user_package`
 --
 
 CREATE TABLE `tr_user_package` (
@@ -1213,7 +1220,7 @@ CREATE TABLE `tr_user_package` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_log`
+-- Table structure for table `user_log`
 --
 
 CREATE TABLE `user_log` (
@@ -1226,7 +1233,7 @@ CREATE TABLE `user_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_log`
+-- Dumping data for table `user_log`
 --
 
 INSERT INTO `user_log` (`id`, `description`, `item`, `ip_address`, `created_by`, `created_date`) VALUES
@@ -1365,37 +1372,37 @@ INSERT INTO `user_log` (`id`, `description`, `item`, `ip_address`, `created_by`,
 --
 
 --
--- Indeks untuk tabel `ci_sessions`
+-- Indexes for table `ci_sessions`
 --
 ALTER TABLE `ci_sessions`
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
--- Indeks untuk tabel `dt_item_laundry`
+-- Indexes for table `dt_item_laundry`
 --
 ALTER TABLE `dt_item_laundry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_item_laundry_history`
+-- Indexes for table `dt_item_laundry_history`
 --
 ALTER TABLE `dt_item_laundry_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_payment_deposit`
+-- Indexes for table `dt_payment_deposit`
 --
 ALTER TABLE `dt_payment_deposit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_payment_deposit_history`
+-- Indexes for table `dt_payment_deposit_history`
 --
 ALTER TABLE `dt_payment_deposit_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_payment_laundry`
+-- Indexes for table `dt_payment_laundry`
 --
 ALTER TABLE `dt_payment_laundry`
   ADD PRIMARY KEY (`id`);
@@ -1403,185 +1410,185 @@ ALTER TABLE `dt_payment_laundry` ADD FULLTEXT KEY `idx_dt_payment_laundry_type` 
 ALTER TABLE `dt_payment_laundry` ADD FULLTEXT KEY `idx_dt_payment_laundry_payment_type` (`payment_type`);
 
 --
--- Indeks untuk tabel `dt_payment_laundry_history`
+-- Indexes for table `dt_payment_laundry_history`
 --
 ALTER TABLE `dt_payment_laundry_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_picture_laundry`
+-- Indexes for table `dt_picture_laundry`
 --
 ALTER TABLE `dt_picture_laundry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_picture_laundry_history`
+-- Indexes for table `dt_picture_laundry_history`
 --
 ALTER TABLE `dt_picture_laundry_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_survey_form`
+-- Indexes for table `dt_survey_form`
 --
 ALTER TABLE `dt_survey_form`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_task_laundry`
+-- Indexes for table `dt_task_laundry`
 --
 ALTER TABLE `dt_task_laundry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dt_task_laundry_history`
+-- Indexes for table `dt_task_laundry_history`
 --
 ALTER TABLE `dt_task_laundry_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_data_sponsor`
+-- Indexes for table `lw_data_sponsor`
 --
 ALTER TABLE `lw_data_sponsor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_detail_trans_order`
+-- Indexes for table `lw_detail_trans_order`
 --
 ALTER TABLE `lw_detail_trans_order`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_trans_order` (`id_trans_order`);
 
 --
--- Indeks untuk tabel `lw_mast_brosur`
+-- Indexes for table `lw_mast_brosur`
 --
 ALTER TABLE `lw_mast_brosur`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_mast_dokter`
+-- Indexes for table `lw_mast_dokter`
 --
 ALTER TABLE `lw_mast_dokter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_mast_kunjungan`
+-- Indexes for table `lw_mast_kunjungan`
 --
 ALTER TABLE `lw_mast_kunjungan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_mast_makloon`
+-- Indexes for table `lw_mast_makloon`
 --
 ALTER TABLE `lw_mast_makloon`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_mast_medrep`
+-- Indexes for table `lw_mast_medrep`
 --
 ALTER TABLE `lw_mast_medrep`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_trans_order`
+-- Indexes for table `lw_trans_order`
 --
 ALTER TABLE `lw_trans_order`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_trans_order` (`id_trans_order`);
 
 --
--- Indeks untuk tabel `lw_trans_penerimaan`
+-- Indexes for table `lw_trans_penerimaan`
 --
 ALTER TABLE `lw_trans_penerimaan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_trans_tagihan`
+-- Indexes for table `lw_trans_tagihan`
 --
 ALTER TABLE `lw_trans_tagihan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_user`
+-- Indexes for table `lw_user`
 --
 ALTER TABLE `lw_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lw_user_group`
+-- Indexes for table `lw_user_group`
 --
 ALTER TABLE `lw_user_group`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_additional_service`
+-- Indexes for table `ms_additional_service`
 --
 ALTER TABLE `ms_additional_service`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_coupon`
+-- Indexes for table `ms_coupon`
 --
 ALTER TABLE `ms_coupon`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_customer`
+-- Indexes for table `ms_customer`
 --
 ALTER TABLE `ms_customer`
   ADD PRIMARY KEY (`id`);
 ALTER TABLE `ms_customer` ADD FULLTEXT KEY `idx_ms_customer_fullname_handphone` (`fullname`,`handphone`);
 
 --
--- Indeks untuk tabel `ms_laundry_service`
+-- Indexes for table `ms_laundry_service`
 --
 ALTER TABLE `ms_laundry_service`
   ADD PRIMARY KEY (`id`);
 ALTER TABLE `ms_laundry_service` ADD FULLTEXT KEY `idx_ms_laundry_service_item` (`item`);
 
 --
--- Indeks untuk tabel `ms_outlet`
+-- Indexes for table `ms_outlet`
 --
 ALTER TABLE `ms_outlet`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_outlet_user`
+-- Indexes for table `ms_outlet_user`
 --
 ALTER TABLE `ms_outlet_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_package`
+-- Indexes for table `ms_package`
 --
 ALTER TABLE `ms_package`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_promo`
+-- Indexes for table `ms_promo`
 --
 ALTER TABLE `ms_promo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_user_group`
+-- Indexes for table `ms_user_group`
 --
 ALTER TABLE `ms_user_group`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ms_user_mgmt`
+-- Indexes for table `ms_user_mgmt`
 --
 ALTER TABLE `ms_user_mgmt`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `system_log`
+-- Indexes for table `system_log`
 --
 ALTER TABLE `system_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tr_laundry`
+-- Indexes for table `tr_laundry`
 --
 ALTER TABLE `tr_laundry`
   ADD PRIMARY KEY (`id`);
@@ -1590,263 +1597,263 @@ ALTER TABLE `tr_laundry` ADD FULLTEXT KEY `idx_tr_laundry_cust_handphone` (`cust
 ALTER TABLE `tr_laundry` ADD FULLTEXT KEY `idx_tr_laundry_cust_fullname_cust_handphone` (`cust_fullname`,`cust_handphone`);
 
 --
--- Indeks untuk tabel `tr_laundry_history`
+-- Indexes for table `tr_laundry_history`
 --
 ALTER TABLE `tr_laundry_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tr_user_deposit`
+-- Indexes for table `tr_user_deposit`
 --
 ALTER TABLE `tr_user_deposit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tr_user_package`
+-- Indexes for table `tr_user_package`
 --
 ALTER TABLE `tr_user_package`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `user_log`
+-- Indexes for table `user_log`
 --
 ALTER TABLE `user_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `dt_item_laundry`
+-- AUTO_INCREMENT for table `dt_item_laundry`
 --
 ALTER TABLE `dt_item_laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_item_laundry_history`
+-- AUTO_INCREMENT for table `dt_item_laundry_history`
 --
 ALTER TABLE `dt_item_laundry_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_payment_deposit`
+-- AUTO_INCREMENT for table `dt_payment_deposit`
 --
 ALTER TABLE `dt_payment_deposit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_payment_deposit_history`
+-- AUTO_INCREMENT for table `dt_payment_deposit_history`
 --
 ALTER TABLE `dt_payment_deposit_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_payment_laundry`
+-- AUTO_INCREMENT for table `dt_payment_laundry`
 --
 ALTER TABLE `dt_payment_laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_payment_laundry_history`
+-- AUTO_INCREMENT for table `dt_payment_laundry_history`
 --
 ALTER TABLE `dt_payment_laundry_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_picture_laundry`
+-- AUTO_INCREMENT for table `dt_picture_laundry`
 --
 ALTER TABLE `dt_picture_laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_picture_laundry_history`
+-- AUTO_INCREMENT for table `dt_picture_laundry_history`
 --
 ALTER TABLE `dt_picture_laundry_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_survey_form`
+-- AUTO_INCREMENT for table `dt_survey_form`
 --
 ALTER TABLE `dt_survey_form`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_task_laundry`
+-- AUTO_INCREMENT for table `dt_task_laundry`
 --
 ALTER TABLE `dt_task_laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `dt_task_laundry_history`
+-- AUTO_INCREMENT for table `dt_task_laundry_history`
 --
 ALTER TABLE `dt_task_laundry_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_data_sponsor`
+-- AUTO_INCREMENT for table `lw_data_sponsor`
 --
 ALTER TABLE `lw_data_sponsor`
   MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_detail_trans_order`
+-- AUTO_INCREMENT for table `lw_detail_trans_order`
 --
 ALTER TABLE `lw_detail_trans_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_mast_brosur`
+-- AUTO_INCREMENT for table `lw_mast_brosur`
 --
 ALTER TABLE `lw_mast_brosur`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_mast_dokter`
+-- AUTO_INCREMENT for table `lw_mast_dokter`
 --
 ALTER TABLE `lw_mast_dokter`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_mast_kunjungan`
+-- AUTO_INCREMENT for table `lw_mast_kunjungan`
 --
 ALTER TABLE `lw_mast_kunjungan`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_mast_makloon`
+-- AUTO_INCREMENT for table `lw_mast_makloon`
 --
 ALTER TABLE `lw_mast_makloon`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_mast_medrep`
+-- AUTO_INCREMENT for table `lw_mast_medrep`
 --
 ALTER TABLE `lw_mast_medrep`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_trans_order`
+-- AUTO_INCREMENT for table `lw_trans_order`
 --
 ALTER TABLE `lw_trans_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_trans_penerimaan`
+-- AUTO_INCREMENT for table `lw_trans_penerimaan`
 --
 ALTER TABLE `lw_trans_penerimaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_trans_tagihan`
+-- AUTO_INCREMENT for table `lw_trans_tagihan`
 --
 ALTER TABLE `lw_trans_tagihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_user`
+-- AUTO_INCREMENT for table `lw_user`
 --
 ALTER TABLE `lw_user`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `lw_user_group`
+-- AUTO_INCREMENT for table `lw_user_group`
 --
 ALTER TABLE `lw_user_group`
   MODIFY `id` int(13) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_additional_service`
+-- AUTO_INCREMENT for table `ms_additional_service`
 --
 ALTER TABLE `ms_additional_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_coupon`
+-- AUTO_INCREMENT for table `ms_coupon`
 --
 ALTER TABLE `ms_coupon`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_customer`
+-- AUTO_INCREMENT for table `ms_customer`
 --
 ALTER TABLE `ms_customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_laundry_service`
+-- AUTO_INCREMENT for table `ms_laundry_service`
 --
 ALTER TABLE `ms_laundry_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_outlet`
+-- AUTO_INCREMENT for table `ms_outlet`
 --
 ALTER TABLE `ms_outlet`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_outlet_user`
+-- AUTO_INCREMENT for table `ms_outlet_user`
 --
 ALTER TABLE `ms_outlet_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_package`
+-- AUTO_INCREMENT for table `ms_package`
 --
 ALTER TABLE `ms_package`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_promo`
+-- AUTO_INCREMENT for table `ms_promo`
 --
 ALTER TABLE `ms_promo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_user_group`
+-- AUTO_INCREMENT for table `ms_user_group`
 --
 ALTER TABLE `ms_user_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ms_user_mgmt`
+-- AUTO_INCREMENT for table `ms_user_mgmt`
 --
 ALTER TABLE `ms_user_mgmt`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `system_log`
+-- AUTO_INCREMENT for table `system_log`
 --
 ALTER TABLE `system_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tr_laundry`
+-- AUTO_INCREMENT for table `tr_laundry`
 --
 ALTER TABLE `tr_laundry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `tr_laundry_history`
+-- AUTO_INCREMENT for table `tr_laundry_history`
 --
 ALTER TABLE `tr_laundry_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `tr_user_deposit`
+-- AUTO_INCREMENT for table `tr_user_deposit`
 --
 ALTER TABLE `tr_user_deposit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tr_user_package`
+-- AUTO_INCREMENT for table `tr_user_package`
 --
 ALTER TABLE `tr_user_package`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `user_log`
+-- AUTO_INCREMENT for table `user_log`
 --
 ALTER TABLE `user_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;

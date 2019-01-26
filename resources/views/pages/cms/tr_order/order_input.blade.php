@@ -53,11 +53,9 @@
                                                 {{ csrf_field() }}
 
                                     <div class="row">
-                                        <div class="col-sm-12 col-xs-12 col-md-6">
-                                            
-                                            
+                                        <div class="col-sm-12 col-xs-12 col-md-12">
 
-                                            <div class="p-20">
+                                            <div class="">
                                                 <div class="form-group" hidden="">
                                                     <label for="id_trans_order">ID Trans Order<span class="text-danger">*</span></label>
                                                     <input name="id_trans_order"  autocomplete="off" required  readonly=""  type="number" value="{{$id_trans_order}}" placeholder="Masukan Stok" name" class="form-control" id="id_trans_order">
@@ -106,18 +104,77 @@
 
                                                 <div class="form-group">
                                                     <label for="id_so">ID SO<span class="text-danger">*</span></label>
-                                                    <input name="id_so"  autocomplete="off" required   type="number" placeholder="Masukan Stok" name" class="form-control" id="id_so">
+                                                    <input name="id_so"  autocomplete="off" required   type="number" placeholder="Masukan ID SO" name" class="form-control" id="id_so">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="no_so">No SO<span class="text-danger">*</span></label>
+                                                    <input name="no_so"  autocomplete="off" required   type="number" placeholder="Masukan No So" name" class="form-control" id="no_so">
                                                 </div>
                                                 
                                             </div>
 
                                         </div>
 
-                                        <div class="col-sm-12 col-xs-12 col-md-6">
-                                            <div class="p-20">
+                                        
+                                    </div>
+                                    <!-- end row -->
+                    </div>
+
+
+
+
+
+
+
+
+                     <div class="card-box">
+                                               
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12 col-md-12">
+                                            <div class="form-group">
+                                                    <label>Tanggal Tagihan</label>
+                                                    <div>
+                                                        <div class="input-group">
+                                                            <input type="text" autocomplete="off" class="form-control" name="tgl_tagihan" placeholder="yyyy-mm-dd"  id="tgl_tagihan">
+                                                            <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
+                                                        </div><!-- input-group -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Tanggal Faktur</label>
+                                                    <div>
+                                                        <div class="input-group">
+                                                            <input type="text" autocomplete="off" class="form-control" name="tgl_faktur" placeholder="yyyy-mm-dd"  id="tgl_faktur">
+                                                            <span class="input-group-addon bg-custom b-0"><i class="icon-calender"></i></span>
+                                                        </div><!-- input-group -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="id_faktur">ID Faktur<span class="text-danger">*</span></label>
+                                                    <input name="id_faktur"  autocomplete="off" required   type="number" placeholder="Masukan ID SO" name" class="form-control" id="id_faktur">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="is_lunas">Lunas/Belum Lunas<span class="text-danger">*</span></label>
+                                                    <select name="is_lunas" class="form-control">
+                                                        <option value="">Pilih Kategori</option>
+                                                        <option value="1"
+                                                            ><strong style="color: green">LUNAS</strong>
+                                                        </option>
+                                                        <option value="0"
+                                                            ><strong style="color: red">BELUM LUNAS</strong>
+                                                        </option>
+                                                    </select>
+                                                </div>
                                                 
-                                            </div>
                                         </div>
+
+                                    </div>
+
                                         
                                     </div>
                                     <div class="form-group text-right m-b-0">
@@ -159,6 +216,18 @@
                 
             });
           $('#tgl_trans_order').datepicker({
+                
+                    "format": "yyyy-mm-dd"
+                
+            });
+          
+          $('#tgl_tagihan').datepicker({
+                
+                    "format": "yyyy-mm-dd"
+                
+            });
+
+          $('#tgl_faktur').datepicker({
                 
                     "format": "yyyy-mm-dd"
                 
